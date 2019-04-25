@@ -1,4 +1,3 @@
-// Adi Yanai 209009349
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -7,7 +6,7 @@
 #include <fcntl.h>
 #include <string.h>
 #define ARGS_NUM 3
-#define PRINT_ERROR_AND_EXIT fprintf(stderr, "Error in system call\n"); exit(-1);
+#define PRINT_ERROR_AND_EXIT write(2, "Error in system call\n", strlen("Error in system call\n")); exit(-1);
 #define CLOSE_FILES close(fd1); close(fd2);
 
 /**
